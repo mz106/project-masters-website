@@ -3,11 +3,13 @@ import './App.css';
 
 import { Routes, Route, BrowserRouter as Router, useLocation, Link } from 'react-router-dom';
 
+import Header from './components/header/Header';
+
 function App() {
   return (
     <div className="App">
       <div className="container--flex container__app--center">
-      
+      <Header />
       <Routes>
         {/* <Route path="/" element={<Menu />} />
         <Route path="/about" element={<About />} />

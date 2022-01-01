@@ -1,20 +1,17 @@
 * {
   background-color: #282c34;
+  font-family: 'gilroy';
 }
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #282c34;
+  background-color: rgb(68, 68, 68);
   height: 100vh;
-}
-
-code {
-  font-family: 'gilroy';
+  font-size: 10px;
 }
 
 .container--flex {
   display: flex;
-  background-color: #282c34;
 }
