@@ -11,6 +11,10 @@
     height: 90%;
 }
 
+.heading--about {
+    color: rgb(205, 204, 204);
+}
+
 .container__about--left {
     width: 40%;
     height: 80%;

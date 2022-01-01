@@ -1,0 +1,18 @@
+.container__footer {
+    height: 10vh;
+    width: 100%;
+    border: 1px solid red;
+    flex-direction: column;
+    margin: auto;
+    color: rgb(205, 204, 204);
+}
+
+.container__footer--inner {
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    border: 1px solid green;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
