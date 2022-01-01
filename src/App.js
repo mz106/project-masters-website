@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import Header from './components/header/Header';
 import Menu from './components/menu/Menu';
+import Footer from './components/footer/Footer';
 import About from './components/about/About';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/fe/hackdesign" element={<Hackdesign />} />
           <Route path="/backend/ccdjango" element={<Ccdjango />} /> */}
         </Routes>
+        <Footer />
       </div>
     </div>
   );
