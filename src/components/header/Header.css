@@ -1,0 +1,72 @@
+.container__header {
+    width: 100%;
+    height: 10vh;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2em;
+}
+
+.container__logo {
+    width: 20%;
+    height: 100%;
+}
+
+.cn-logo {
+    width: 100%;
+}
+
+.container__nav {
+    width: 30%;
+    height: 100%;
+}
+
+.nav__header {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container__nav--list {
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+    width: 4.5em;
+    /* border: 1px solid blue; */
+}
+
+a {
+    text-decoration: none;
+    font-size: 2em;
+}
+
+.icon {
+    width: 4em;
+    height: 4em;
+    /* border: 1px solid red; */
+}
+
+.fa-icon {
+    color: red;
+}
+
+.linkedin-icon {
+    color: rgb(40,103,178);
+}
+
+.twitter-icon {
+    color: rgb(29,161,242);
+}
+
+.youtube-icon {
+    color: rgb(255,0,0);
+}
+
+/* .icon:hover {
+    width: 4.2em;
+    height: 4.2em;
+} */
