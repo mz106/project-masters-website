@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import Header from "../Header";
 import cnLink from "../images/Short blue orange.png";
@@ -10,7 +10,6 @@ describe("Test Header", () => {
     test("Test img render", () => {
         render(<Header />);
         expect(screen.findByRole("heading"));
-        screen.get
     });
 
     test("Does cn website link work links work", () => {
