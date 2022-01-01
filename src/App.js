@@ -1,10 +1,11 @@
 
 import './App.css';
 
-import { Routes, Route, BrowserRouter as Router, useLocation, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import Header from './components/header/Header';
 import Menu from './components/menu/Menu';
+import About from './components/about/About';
 
 function App() {
   return (
@@ -13,8 +14,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Menu />} />
-          {/* <Route path="/about" element={<About />} />
-          <Route path="/general" element={<General />} />
+          <Route path="/about" element={<About />} />
+          {/* <Route path="/general" element={<General />} />
           <Route path="/frontend" element={<Fe />} />
           <Route path="/backend" element={<Be />} />
           <Route path="/interview" element={<Interview />} /> 

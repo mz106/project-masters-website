@@ -1,0 +1,40 @@
+.container__about {
+    border: 1px solid red;
+    height: 70vh;
+    width: 80%;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.container__about--inner {
+    width: 100%;
+    height: 90%;
+}
+
+.container__about--left {
+    width: 40%;
+    height: 80%;
+    border: 1px solid green;
+    margin: auto;
+    flex-direction: column;
+}
+
+.para--about {
+    border: 1px solid white;
+    width: 80%;
+    margin: auto;
+    font-size: large;
+}
+
+.container__about--right {
+    width: 40%;
+    height: 80%;
+    border: 1px solid green;
+    margin: auto;
+    flex-direction: column;
+}
+
+.container__about--navlink {
+    height: 5vh;
+    justify-content: center;
+}
