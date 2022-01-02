@@ -15,3 +15,7 @@ body {
 .container--flex {
   display: flex;
 }
+
+.nav-link {
+  color: rgb(245, 179, 47);
+}

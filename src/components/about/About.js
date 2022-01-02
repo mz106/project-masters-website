@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './About.css';
 
 function About() {
@@ -16,9 +16,9 @@ function About() {
                 </div>
             </div>   
             <div className="container--flex container__about--navlink"> 
-                <NavLink to="/">
+                <Link to="/" className="nav-link">
                     Menu
-                </NavLink>
+                </Link>
             </div>
         </div>
     )
