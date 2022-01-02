@@ -1,0 +1,66 @@
+.container__codewars {
+    height: 70vh;
+    width: 80%;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+  
+  .container__codewars--inner {
+    width: 100%;
+    height: 90%;
+  }
+  
+  .container__codewars--left {
+    width: 40%;
+    height: 80%;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .container__codewars--img {
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .codewars__link {
+    width: 100%;
+  }
+  
+  img {
+    object-fit: contain;
+    width: 100%;
+  }
+  
+  .container__codewars--right {
+    width: 40%;
+    height: 80%;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 50px;
+  }
+  
+  .para--codewars {
+    text-align: left;
+    font-size: 2em;
+    background-color: rgb(205, 204, 204);
+    padding: 0.5em;
+  }
+
+  .inline-link {
+      font-size: 20px;
+      background-color: rgb(205, 204, 204);
+      /* color: rgb(245, 179, 47); */
+  }
+  
+  .container__codewars--navlink {
+    justify-content: space-between;
+    height: 5vh;
+    justify-content: center;
+  }
+
+  .codewars-nav {
+      margin: 0 auto;
+      color: rgb(245, 179, 47);
+  }

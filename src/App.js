@@ -7,6 +7,8 @@ import Header from './components/header/Header';
 import Menu from './components/menu/Menu';
 import Footer from './components/footer/Footer';
 import About from './components/about/About';
+import General from './components/general/General';
+import Codewars from './components/general/codewars/Codewars';
 
 function App() {
   return (
@@ -16,13 +18,14 @@ function App() {
         <Routes>
           <Route path="/" element={<Menu />} />
           <Route path="/about" element={<About />} />
-          {/* <Route path="/general" element={<General />} />
-          <Route path="/frontend" element={<Fe />} />
+          <Route path="/general" element={<General />} />
+          {/* <Route path="/frontend" element={<Fe />} />
           <Route path="/backend" element={<Be />} />
           <Route path="/interview" element={<Interview />} /> 
           <Route path="/fe/fementor" element={<FeMentor />} />
           <Route path="/fe/hackdesign" element={<Hackdesign />} />
           <Route path="/backend/ccdjango" element={<Ccdjango />} /> */}
+          <Route path="/general/codewars" element={<Codewars />} />
         </Routes>
         <Footer />
       </div>
