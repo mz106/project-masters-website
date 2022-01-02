@@ -11,6 +11,8 @@ import General from './components/general/General';
 import Codewars from './components/general/codewars/Codewars';
 import Fe from './components/fe/Fe.js';
 import FeMentor from './components/fe/feMentor/FeMentor';
+import Be from './components/be/Be';
+import CcDjango from "./components/be/ccdjango/CcDjango";
 
 function App() {
   return (
@@ -23,11 +25,13 @@ function App() {
           <Route path="/general" element={<General />} />
           <Route path="/frontend" element={<Fe />} />
           <Route path="/fe/fementor" element={<FeMentor />} />
-          {/* <Route path="/backend" element={<Be />} />
+          <Route path="/backend" element={<Be />} />
+          <Route path="/backend/ccdjango" element={<CcDjango />} />
+          {/* 
           <Route path="/interview" element={<Interview />} /> 
           
           <Route path="/fe/hackdesign" element={<Hackdesign />} />
-          <Route path="/backend/ccdjango" element={<Ccdjango />} /> */}
+           */}
           <Route path="/general/codewars" element={<Codewars />} />
         </Routes>
         <Footer />
