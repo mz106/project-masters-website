@@ -16,7 +16,7 @@ import CcDjango from "./components/be/ccdjango/CcDjango";
 import Interview from './components/interview/Interview';
 import Algo from './components/interview/algo/Algo';
 
-const text = "Welcome to the post masteres course resources page!"
+const text = "Welcome to the Masters Bootcamp resources page!"
 
 function App() {
 

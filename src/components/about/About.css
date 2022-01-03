@@ -1,5 +1,4 @@
 .container__about {
-    border: 1px solid red;
     height: 70vh;
     width: 80%;
     margin: 0 auto;
@@ -18,22 +17,21 @@
 .container__about--left {
     width: 40%;
     height: 80%;
-    border: 1px solid green;
     margin: auto;
     flex-direction: column;
 }
 
 .para--about {
-    border: 1px solid white;
     width: 80%;
     margin: auto;
     font-size: large;
+    background-color: rgb(205, 204, 204);
+    padding: 0.5em;
 }
 
 .container__about--right {
     width: 40%;
     height: 80%;
-    border: 1px solid green;
     margin: auto;
     flex-direction: column;
 }
