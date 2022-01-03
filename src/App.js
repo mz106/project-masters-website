@@ -1,6 +1,6 @@
 
 import './App.css';
-
+import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Header from './components/header/Header';
@@ -16,24 +16,29 @@ import CcDjango from "./components/be/ccdjango/CcDjango";
 import Interview from './components/interview/Interview';
 import Algo from './components/interview/algo/Algo';
 
+const text = "Welcome to the post masteres course resources page!"
+
 function App() {
+
+  const [route, setRoute] = useState(text);
+
   return (
     <div className="App">
       <div className="container--flex container__app--center">
         <Header />
         <Routes>
-          <Route path="/" element={<Menu />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/general" element={<General />} />
-          <Route path="/general/codewars" element={<Codewars />} />
-          <Route path="/frontend" element={<Fe />} />
-          <Route path="/fe/fementor" element={<FeMentor />} />
-          <Route path="/backend" element={<Be />} />
-          <Route path="/backend/ccdjango" element={<CcDjango />} />
-          <Route path="/interview" element={<Interview />} /> 
-          <Route path='/interview/algo' element={<Algo />} />
+          <Route path="/" element={<Menu route={route} setRoute={setRoute} />} />
+          <Route path="/about" element={<About route={route} setRoute={setRoute} text={text}/>} />
+          <Route path="/general" element={<General route={route} setRoute={setRoute} text={text}/>} />
+          <Route path="/general/codewars" element={<Codewars route={route} setRoute={setRoute} text={text}/>} />
+          <Route path="/frontend" element={<Fe route={route} setRoute={setRoute} text={text}/>} />
+          <Route path="/fe/fementor" element={<FeMentor route={route} setRoute={setRoute} text={text}/>} />
+          <Route path="/backend" element={<Be route={route} setRoute={setRoute} text={text}/>} />
+          <Route path="/backend/ccdjango" element={<CcDjango route={route} setRoute={setRoute} text={text}/>} />
+          <Route path="/interview" element={<Interview route={route} setRoute={setRoute} text={text}/>} /> 
+          <Route path='/interview/algo' element={<Algo route={route} setRoute={setRoute} text={text}/>} />
         </Routes>
-        <Footer />
+        <Footer route={route}/>
       </div>
     </div>
   );

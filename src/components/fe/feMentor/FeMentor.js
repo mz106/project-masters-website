@@ -4,13 +4,22 @@ import "./FeMentor.css";
 import FEMLogo from "./images/FrontendMentorLogo.png";
 import FEMText from "./images/FrontendMentorText.png"
 
-function FeMentor() {
+function FeMentor({ setRoute, text }) {
+
+    const onLinkToMenu = (e) => {
+        setRoute(text);
+    }
+
+    const onLinkToResource = (e) => {
+        setRoute(e.target.text);
+    }
+
     return (
         <div className="container--flex container__fementor">
         <div className="container--flex container__fementor--inner">
         <div className="container--flex container__fementor--left">
             <div className="container--flex container__fementor--img">
-                <a className="fementor__link" href="https://www.frontendmentor.io/" rel="noreferrer" rel="noopener" target="_blank">
+                <a className="fementor__link" href="https://www.frontendmentor.io/" target="_blank" rel="noreferrer" rel="noopener" >
                     <img src={FEMLogo} />
                 </a>    
                 <a className="fementor__link" href="https://www.frontendmentor.io/" rel="noreferrer" rel="noopener" target="_blank">
@@ -32,10 +41,10 @@ function FeMentor() {
         </div>
     </div>
     <div className="container--flex container__fementor--navlink"> 
-        <Link to="/frontend" className='fementor-nav'>
+        <Link to="/frontend" className='fementor-nav' onClick={onLinkToResource}>
             Frontend
         </Link>
-        <Link to="/" className='fementor-nav'>
+        <Link to="/" className='fementor-nav' onClick={onLinkToMenu}>
             Menu
         </Link>
     </div>    

@@ -4,7 +4,16 @@ import "./Algo.css";
 import algoLogo from './images/algoLogo.png';
 
 
-function Algo() {
+function Algo({ setRoute, text }) {
+
+    const onLinkToMenu = (e) => {
+        setRoute(text);
+    }
+
+    const onLinkToResource = (e) => {
+        setRoute(e.target.text);
+    }
+
     return (
         <div className="container--flex container__algo">
         <div className="container--flex container__algo--inner">
@@ -24,10 +33,10 @@ function Algo() {
         </div>
     </div>
     <div className="container--flex container__algo--navlink"> 
-        <Link to="/interview" className='algo-nav'>
+        <Link to="/interview" className='algo-nav' onClick={onLinkToResource}>
             Interview
         </Link>
-        <Link to="/" className='algo-nav'>
+        <Link to="/" className='algo-nav' onClick={onLinkToMenu}>
             Menu
         </Link>
     </div>    

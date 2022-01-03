@@ -2,7 +2,16 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import "./Be.css";
 
-function Be() {
+function Be({ route, setRoute, text }) {
+
+    const onLinkToMenu = (e) => {
+        setRoute(text);
+    }
+
+    const onLinkToResource = (e) => {
+        setRoute(e.target.text);
+    }
+
     return (
         <div className="container--flex container__be">
             <div className="container--flex container__be--inner">
@@ -64,7 +73,7 @@ function Be() {
                 <h3>Resources</h3>
                 <ul className="be__resources--ul container--flex">
                     <li>
-                        <Link to="/backend/ccdjango">
+                        <Link to="/backend/ccdjango" onClick={onLinkToResource}>
                             Codecademy Django
                         </Link>
                     </li>
@@ -73,7 +82,7 @@ function Be() {
             
         </div>
         <div className="container--flex container__be--navlink"> 
-            <Link to="/">
+            <Link to="/" onClick={onLinkToMenu}>
                 Menu
             </Link>
         </div>    

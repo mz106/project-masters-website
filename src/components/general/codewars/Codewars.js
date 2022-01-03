@@ -4,7 +4,16 @@ import codewarsLogo from "./images/codewarsLogo.png";
 import "./Codewars.css";
 
 
-function Codewars() {
+function Codewars({ setRoute, text }) {
+
+    const onLinkToMenu = (e) => {
+        setRoute(text);
+    }
+
+    const onLinkToResource = (e) => {
+        setRoute(e.target.text);
+    }
+
     return (
         <div className="container--flex container__codewars">
         <div className="container--flex container__codewars--inner">
@@ -25,10 +34,10 @@ function Codewars() {
         </div>
     </div>
     <div className="container--flex container__codewars--navlink"> 
-        <Link to="/general" className='codewars-nav'>
+        <Link to="/general" className='codewars-nav' onClick={onLinkToResource}>
             General
         </Link>
-        <Link to="/" className='codewars-nav'>
+        <Link to="/" className='codewars-nav' onClick={onLinkToMenu}>
             Menu
         </Link>
     </div>    
