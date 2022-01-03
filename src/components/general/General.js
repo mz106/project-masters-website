@@ -2,7 +2,17 @@ import React from 'react';
 import './General.css';
 import { Link } from "react-router-dom";
 
-function General() {
+function General( { route, setRoute, text }) {
+
+    const onLinkToMenu = (e) => {
+        setRoute(text);
+    }
+
+    const onLinkToResource = (e) => {
+        setRoute(e.target.text);
+    }
+
+
     return (
         <div className="container__flex container__general">
             <div className="container--flex container__general--inner">
@@ -63,7 +73,7 @@ function General() {
                     <h3>Resources</h3>
                     
                     <ul className='general__resources--ul container--flex'>
-                        <Link to="/general/codewars">
+                        <Link to="/general/codewars" onClick={onLinkToResource}>
                             Codewars
                         </Link>
                     </ul>
@@ -71,7 +81,7 @@ function General() {
                 </div>
             </div>
             <div className="container--flex container__general--navlink"> 
-                <Link to="/" className="nav-link">
+                <Link to="/" className="nav-link" onClick={onLinkToMenu}>
                     Menu
                 </Link>
             </div>    

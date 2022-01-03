@@ -4,7 +4,16 @@ import CCDjangoLogo from './images/codecademylogo.png';
 import "./CcDjango.css";
 
 
-function CcDjango() {
+function CcDjango({ setRoute, text }) {
+
+    const onLinkToMenu = (e) => {
+        setRoute(text);
+    }
+
+    const onLinkToResource = (e) => {
+        setRoute(e.target.text);
+    }
+
     return (
         <div className="container--flex container__ccdjango">
         <div className="container--flex container__ccdjango--inner">
@@ -27,10 +36,10 @@ function CcDjango() {
         </div>
     </div>
     <div className="container--flex container__ccdjango--navlink"> 
-        <Link to="/backend" className='ccdjango-nav'>
+        <Link to="/backend" className='ccdjango-nav' onClick={onLinkToResource}>
             Backend
         </Link>
-        <Link to="/" className='ccdjango-nav'>
+        <Link to="/" className='ccdjango-nav' onClick={onLinkToMenu}>
             Menu
         </Link>
     </div>    

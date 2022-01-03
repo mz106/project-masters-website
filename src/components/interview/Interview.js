@@ -2,7 +2,16 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import "./Interview.css";
 
-function Interview() {
+function Interview({ route, setRoute, text }) {
+
+    const onLinkToMenu = (e) => {
+        setRoute(text);
+    }
+
+    const onLinkToResource = (e) => {
+        setRoute(e.target.text);
+    }
+
     return (
         <div className="container--flex container__interview">
             <div className="container--flex container__interview--inner">
@@ -62,7 +71,7 @@ function Interview() {
                 <h3>Resources</h3>
                 <ul className='container--flex interview__resources--ul'>
                     <li>
-                        <Link to='/interview/algo' >
+                        <Link to='/interview/algo' onClick={onLinkToResource}>
                             AlgoExpert
                         </Link>
                     </li>
@@ -70,7 +79,7 @@ function Interview() {
             </div>
         </div>
         <div className="container--flex container__interview--navlink"> 
-            <Link to="/">
+            <Link to="/" onClick={onLinkToMenu}>
                 Menu
             </Link>
         </div>    

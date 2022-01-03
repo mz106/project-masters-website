@@ -2,7 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './About.css';
 
-function About() {
+function About({ route, setRoute, text }) {
+
+    const onLinkToMenu = (e) => {
+        setRoute(text);
+      }
+
     return (
         <div className="container--flex container__about">
             <div className="container--flex container__about--inner">
@@ -16,7 +21,7 @@ function About() {
                 </div>
             </div>   
             <div className="container--flex container__about--navlink"> 
-                <Link to="/" className="nav-link">
+                <Link to="/" className="nav-link" onClick={onLinkToMenu}>
                     Menu
                 </Link>
             </div>

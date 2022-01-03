@@ -3,7 +3,16 @@ import { Link } from "react-router-dom";
 import FeMentor from './feMentor/FeMentor';
 import "./Fe.css";
 
-function Fe() {  
+function Fe({ route, setRoute, text }) {  
+
+    const onLinkToMenu = (e) => {
+        setRoute(text);
+      }
+
+      const onLinkToResource = (e) => {
+        setRoute(e.target.text);
+    }
+
     return (
         <div className="container__flex container__fe">
         <div className="container--flex container__fe--inner">
@@ -63,7 +72,7 @@ function Fe() {
                 <h3>Resources</h3>
                 <ul className="container--flex fe__resources--ul">
                     <li>
-                        <Link to="/fe/fementor">
+                        <Link to="/fe/fementor" onClick={onLinkToResource}>
                             Front End Mentor
                         </Link>
                     </li>
@@ -76,7 +85,7 @@ function Fe() {
             </div>
         </div>
         <div className="container--flex container__fe--navlink"> 
-            <Link to="/">
+            <Link to="/" onClick={onLinkToMenu}>
                 Menu
             </Link>
         </div>    
